@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="ftexternal.css"> 
+<style>  
+
+    h1 { 
+        font-size: 60px; 
+        text-align: center; 
+        color: rgb(233, 150, 164); 
+        font: sans-serif; 
+    } 
+
+    .faq { 
+        padding-top: 10px; 
+        color: black; 
+        font-size: 15px; 
+        margin: 30px 20px; 
+    }
+
+    .question {
+        cursor: pointer; 
+        color: rgba(28, 34, 28, 0.602); 
+        display: block; 
+        height: 40px;
+    }
+
+    .answer {
+        display: none;   
+        height: 60px; 
+        font-size: 18px;
+
+    }
+
+
+</style>
+<title>Fruity Treasures</title>
+</head>
+<body>
+
+    <!-- Logo +  Nav Bar  -->
+    <header> 
+        <div class="top">
+        <nav> 
+            <a href="homepage.html"><img class="logo" src="transparent.png"></a>
+            <ul class="topnav">
+            <li><a href="about.html">Menu</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="catalogue.html">Treasures</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav> 
+        </div>
+    </header>
+    
+    <section class="firstsection">  
+    
+    <h1> FAQs </h1>  
+        <div class="faq">
+            <h2 class="question">
+                What is a cultural fruit box?
+            </h2>
+            <div class="answer">
+                A cultural fruit box is a curated selection of fruits 
+                that represents a specific culture or country. It can 
+                include fruits that are commonly consumed in that culture 
+                or ones that hold cultural significance.
+            </div>
+        </div>
+          
+        <div class="faq">
+            <h2 class="question">
+                How do you select the fruits that go into a cultural fruit box?
+            </h2>
+            <div class="answer">
+                We have a team of experts who carefully select and curate 
+                the fruits for each cultural fruit box. We consider factors 
+                such as the seasonality and availability of the fruits, as 
+                well as their cultural significance and popularity in the 
+                specific culture or country.
+            </div>
+        </div>
+          
+        <div class="faq">
+            <h2 class="question">
+                Can I customize my cultural fruit box?
+            </h2>
+            <div class="answer">
+                Unfortunately, we do not offer customization for our cultural 
+                fruit boxes at this time. However, we do offer a variety of 
+                different cultural fruit boxes, so you can choose the one that 
+                best represents the culture or country you are interested in.
+            </div>
+        </div>  
+
+        <div class="faq">
+            <h2 class="question">
+                How long does it take for a cultural fruit box to be delivered?
+            </h2>
+            <div class="answer">
+                Delivery times may vary depending on your location and shipping 
+                method. Typically, our standard shipping takes 3-5 business days,
+                while expedited shipping takes 1-2 business days.
+            </div>
+        </div> 
+
+
+          
+        
+    </section>   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js">    
+    </script>
+    <script>  
+
+        $(document).ready(function() {
+            $('.question').click(function() {
+                $(this).next('.answer').slideToggle("slow");
+            });
+        });
+    
+    </script>
+
+
+
+<footer>
+    <ul class='footer'>
+        <li><a href="tt_homepage.html">
+            FruityTreasures.com</a></li>
+        <li>Copyright 2023</a></li>
+    </ul>
+</footer>
+</body>
+</html>
