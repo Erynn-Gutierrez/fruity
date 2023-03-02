@@ -64,6 +64,8 @@ footer {
     background-color: #104432;
     color: white;
     float: bottom;
+	background-size: contain;
+	
 } 
 ul.footer {    
     list-style-type: none; 
