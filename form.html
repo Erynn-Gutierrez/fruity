@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="ftexternal.css">
+<title>Fruity Treasures | Order</title>
+<style>
+    .order {
+        padding-top: 10px;
+        background-color: pink;
+    }
+</style>
+</head>
+
+
+<body>
+    <header> 
+        <div class="top">
+        <nav> 
+            <a href="homepage.html"><img class="logo" src="transparent.png"></a>
+            <ul class="topnav">
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="catalogue.html">Treasures</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav> 
+        </div>
+    </header> 
+<!-- JS Part 1 -->
+<script>
+
+// creates a menu item
+function boxItem(name, cost)
+{
+	this.name = name;
+	this.cost = cost;
+}
+
+//creates an arr of menuItems
+boxItems = new Array(
+	new boxItem("Rambutan Rendevous", 29.99),
+	new boxItem("Mango Medley", 39.99),
+	new boxItem("Papaya Party", 49.99), 
+	new boxItem("Pinoy Palooza", 59.99),
+	new boxItem("Tantalizing Tango", 69.99)
+    new boxItem("Kiwano Kush", 69.99)
+);
+</script>
+
+<section class="order">
+    <h1>Order Form</h1>
+
+<p class="userInfo">
+    <label>First Name*:</label> 
+    <input type="text"  name='fname'/>
+</p>
+<p class="userInfo">
+    <label>Last Name*:</label>
+    <input type="text"  name='lname'/>
+</p>
+<p class="userInfo address">
+    <label>Street*:</label>
+    <input type="text" name='street' />
+</p>
+<p class="userInfo address">
+    <label>City*:</label>
+    <input type="text" name='city' />
+</p>
+<p class="userInfo">
+    <label>Phone*:</label>
+    <input type="text"  name='phone' />
+</p>
+<p> 
+	<input type="radio"  name="p_or_d" value = "pickup" checked="checked"/>Pickup  
+	<input type="radio"  name='p_or_d' value = 'delivery'/>Delivery
+</p>
+<table border="0" cellpadding="3">
+    <tr>
+        <th>Select Item</th> 
+        <th>Item Name</th>
+        <th>Cost Each</th>
+        <th>Total Cost</th>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</section>
+
+<script>
+
+</script>
