@@ -11,25 +11,67 @@
         font: sans-serif; 
     } 
 
-    .faq { 
+    /* .faq { 
         padding-top: 10px; 
         color: black; 
         font-size: 15px; 
-        margin: 30px 20px; 
+        margin: 30px 20px;  
     }
 
     .question {
         cursor: pointer; 
         color: rgba(28, 34, 28, 0.602); 
         display: block; 
-        height: 40px;
+        height: 40px; 
     }
 
     .answer {
         display: none;   
         height: 60px; 
-        font-size: 18px;
+        font-size: 18px; 
+    }  */ 
 
+    summary { 
+        cursor: pointer; 
+        color: rgba(28, 34, 28, 0.602); 
+        display: block; 
+        height: 40px; 
+        background-color: rgb(251, 224, 228);
+        padding: 10px; 
+        border-radius: 20px; 
+        font-size: 20px; 
+    } 
+
+    details { 
+        height: 100px; 
+        font-size: 18px; 
+        margin-top: 10px; 
+        margin-right: 30px; 
+        margin-left: 30px; 
+        margin-bottom: 10px; 
+        color: black;  
+        padding-bottom: 20px;
+    } 
+
+    details > *:not(summary) { 
+        padding: 20px;
+    }
+
+    .questions { 
+        max-height: 500px; 
+        overflow-y: auto;
+    } 
+
+    summary::before { 
+        content: "+"; 
+        font-size: 30px; 
+        color: rgba(28, 34, 28, 0.602);
+        margin-right: 10px; 
+        float:right;
+    } 
+
+    details[open] summary:before { 
+        content: "-";
     }
 
 
@@ -54,9 +96,48 @@
     </header>
     
     <section class="firstsection">  
+    <div class="questions"> 
+    <h1> FAQs </h1>   
     
-    <h1> FAQs </h1>  
-        <div class="faq">
+        <details> 
+            <summary> What is a fruity treasure box? </summary> 
+            
+            A fruity treasure box is a curated selection of fruits 
+            that represents a specific culture or country. It can 
+            include fruits that are commonly consumed in that culture 
+            or ones that hold cultural significance.
+        </details> 
+
+        <details> 
+            <summary>How do you select the fruits that go into a 
+            fruity treasure box?</summary> 
+            
+            We have a team of experts who carefully select and curate 
+            the fruits for each fruity treasure box. We consider factors 
+            such as the seasonality and availability of the fruits, as 
+            well as their cultural significance and popularity in the 
+            specific culture or country.
+        </details> 
+
+        <details> 
+            <summary> Can I customize my fruity treasure box? </summary> 
+
+            We have a team of experts who carefully select and curate 
+            the fruits for each fruity treasure box. We consider factors 
+            such as the seasonality and availability of the fruits, as 
+            well as their cultural significance and popularity in the 
+            specific culture or country.
+        </details> 
+
+        <details> 
+            <summary> 
+                How long does it take for a fruity treasure box to be delivered?
+            </summary> 
+            Delivery times may vary depending on your location and shipping 
+            method. Typically, our standard shipping takes 3-5 business days,
+            while expedited shipping takes 1-2 business days.
+        </details>
+        <!-- <div class="faq">
             <h2 class="question">
                 What is a fruity treasure box?
             </h2>
@@ -102,23 +183,12 @@
                 method. Typically, our standard shipping takes 3-5 business days,
                 while expedited shipping takes 1-2 business days.
             </div>
-        </div> 
+        </div>  -->
+    </div>  
 
 
-          
-        
+
     </section>   
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js">    
-    </script>
-    <script>  
-
-        $(document).ready(function() {
-            $('.question').click(function() {
-                $(this).next('.answer').slideToggle("slow");
-            });
-        });
-    
-    </script>
 
 
 
@@ -128,6 +198,17 @@
             FruityTreasures.com</a></li>
         <li>Copyright 2023</a></li>
     </ul>
-</footer>
+</footer> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js">    
+</script>
+<script>  
+
+    $(document).ready(function() {
+        $('.question').click(function() {
+            $(this).next('.answer').slideToggle("slow");
+        });
+    });
+
+</script>
 </body>
 </html>
