@@ -17,6 +17,10 @@ body {
 }
 
 header {
+	position: sticky; top: 0;
+}
+
+header {
     background-color: #DCFDF2;
     text-align: left;
     width:100%;
