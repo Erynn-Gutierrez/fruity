@@ -6,6 +6,78 @@
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500;900&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro:wght@700&display=swap" rel="stylesheet">
 	
 <link rel="stylesheet" href="ftexternal.css">
+<style>
+	section.catalog
+	{
+		display: inline-block;
+		height: 900px;
+	/*	padding: 50px;*/
+		padding: 20px;
+		margin: 10px;
+	}
+
+	div.item {
+	  display: inline-block;
+	  width: 25%;
+	  height: 300px;
+	  padding: 50px;
+	  text-align: center;
+	  background-color: white;
+	  color: #104432;
+	  border-radius: 25px;
+	  margin: 5px;
+	}
+
+
+	img.fruitbasket
+	{ 
+		height:250px; 
+		border-radius:100%; 
+		margin: auto;
+	}
+
+	img.fruitbasket:hover {
+		position: relative;
+		z-index: 1;
+		height: 250px;
+		border-radius: 0%;
+	}
+
+
+	h4
+	{
+		font-style: italic;
+	}
+
+	/*
+	.item:hover h4 {
+		display: none;
+		padding: 0px;
+	}
+	.item:hover h1 {
+	  display: none;
+	  padding: 0px;
+	}*/
+
+	button 
+	{
+		margin: auto;
+		margin-left: 40%;
+		margin-right: 50%;
+		width: 20%;
+		height: 60px;
+		border-radius: 10px;
+		background-color: rgba(23,72,0,0.55);
+		border-width: thick;
+		border-color: #104432;	
+	}
+	
+	footer 
+	{
+		
+	}
+
+</style>
 <title>Catalog</title>
 </head>
 <body>
@@ -18,7 +90,7 @@
             <ul class="topnav">
 			<li><a href="about.html">About</a></li>
             <li><a href="FAQs.html">FAQs</a></li>
-            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="catalog.html">Treasures</a></li>
 			<li><a href="order.html">Order</a></li>
             <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -70,7 +142,9 @@
 				<h4>$29.99</h4>
 <!--			</div>-->
 		</div>
-		<br>
+		<br> <br>
+		<button type="button"><a href="order.html">Order now!</a></button>
+
     </section>
     <br>
 	<footer>
