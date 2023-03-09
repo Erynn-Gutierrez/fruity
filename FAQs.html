@@ -11,33 +11,15 @@
         font: sans-serif; 
     } 
 
-    /* .faq { 
-        padding-top: 10px; 
-        color: black; 
-        font-size: 15px; 
-        margin: 30px 20px;  
-    }
-
-    .question {
-        cursor: pointer; 
-        color: rgba(28, 34, 28, 0.602); 
-        display: block; 
-        height: 40px; 
-    }
-
-    .answer {
-        display: none;   
-        height: 60px; 
-        font-size: 18px; 
-    }  */ 
-
     summary { 
         cursor: pointer; 
         color: rgba(28, 34, 28, 0.602); 
         display: block; 
         height: 40px; 
-        background-color: rgb(251, 224, 228);
-        padding: 10px; 
+        background-color: rgb(240, 255, 208);
+        padding-top: 25px;  
+        padding-bottom: 10px;
+        padding-left: 30px;
         border-radius: 20px; 
         font-size: 20px; 
     } 
@@ -49,12 +31,15 @@
         margin-right: 30px; 
         margin-left: 30px; 
         margin-bottom: 10px; 
-        color: black;  
-        padding-bottom: 20px;
+        color: rgba(28, 34, 28, 0.602);  
+        padding-bottom: 40px; 
+        padding-left: 50px; 
+        padding-right: 50px; 
+        line-height: 1.5; 
     } 
 
-    details > *:not(summary) { 
-        padding: 20px;
+    details > :not(summary) {  
+        padding-left: 100px;
     }
 
     .questions { 
@@ -67,13 +52,14 @@
         font-size: 30px; 
         color: rgba(28, 34, 28, 0.602);
         margin-right: 10px; 
-        float:right;
+        float:right; 
+        padding-bottom: 25px; 
+        padding-right: 25px;
     } 
 
     details[open] summary:before { 
         content: "-";
     }
-
 
 </style>
 <title>Fruity Treasures</title>
@@ -138,53 +124,7 @@
             method. Typically, our standard shipping takes 3-5 business days,
             while expedited shipping takes 1-2 business days.
         </details>
-        <!-- <div class="faq">
-            <h2 class="question">
-                What is a fruity treasure box?
-            </h2>
-            <div class="answer">
-                A fruity treasure box is a curated selection of fruits 
-                that represents a specific culture or country. It can 
-                include fruits that are commonly consumed in that culture 
-                or ones that hold cultural significance.
-            </div>
-        </div>
-          
-        <div class="faq">
-            <h2 class="question">
-                How do you select the fruits that go into a fruity treasure box?
-            </h2>
-            <div class="answer">
-                We have a team of experts who carefully select and curate 
-                the fruits for each fruity treasure box. We consider factors 
-                such as the seasonality and availability of the fruits, as 
-                well as their cultural significance and popularity in the 
-                specific culture or country.
-            </div>
-        </div>
-          
-        <div class="faq">
-            <h2 class="question">
-                Can I customize my fruity treasure box?
-            </h2>
-            <div class="answer">
-                Unfortunately, we do not offer customization for our fruity treasure
-                boxes at this time. However, we do offer a variety of 
-                different cultural fruit boxes, so you can choose the one that 
-                best represents the culture or country you are interested in.
-            </div>
-        </div>  
-
-        <div class="faq">
-            <h2 class="question">
-                How long does it take for a fruity treasure box to be delivered?
-            </h2>
-            <div class="answer">
-                Delivery times may vary depending on your location and shipping 
-                method. Typically, our standard shipping takes 3-5 business days,
-                while expedited shipping takes 1-2 business days.
-            </div>
-        </div>  -->
+       
     </div>  
 
 
@@ -202,14 +142,6 @@
 </footer> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js">    
 </script>
-<script>  
 
-    $(document).ready(function() {
-        $('.question').click(function() {
-            $(this).next('.answer').slideToggle("slow");
-        });
-    });
-
-</script>
 </body>
 </html>
