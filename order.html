@@ -15,7 +15,9 @@ form {
   	text-align: center;
   	vertical-align: middle;
     	background-color: rgb(213, 213, 234); 
-	border-radius: 20px; 
+	border-radius: 20px;  
+	padding-bottom: 30px; 
+	padding-top: 30px;
 }  
 
 .between { 
@@ -29,8 +31,7 @@ form {
 
 body { 
 	text-align: center;  
-    	color: rgb(75, 58, 58);
-
+    color: rgb(75, 58, 58);
 }
 </style> 
 <head>
@@ -290,10 +291,6 @@ function td(content, className="")
 		var new_window = window.open("Order Summary", "", "");  
 		var name = document.getElementsByClassName("itemName"); 
 
-		// var linkElement = newWindowDocument.createElement("link");
-  		// linkElement.rel = "stylesheet";
-  		// linkElement.href = "ftexternal.css";
-  		// newWindowDocument.head.appendChild(linkElement);
 
 		new_window.document.write('<link rel="stylesheet" href="ftexternal.css">'); 
 
@@ -301,7 +298,8 @@ function td(content, className="")
 			+ "font: sans-serif; font-size: 60px;} h2 {color: rgba(28, 34, 28, 0.602);"
 			+ "font: sans-serif; text-align: center} "
 			+ ".ordered, .sub, .tax, .total, .time, .email { color: rgba(28, 34, 28, 0.602);"
-		    + " text-align: center; } .ordered {padding-bottom: 20px} .sub, .tax, .total, .time {font-weight: bold;} .summary {padding-bottom: 50px; } </style>");
+		    + " text-align: center; } .ordered {padding-bottom: 20px}"
+			+ ".sub, .tax, .total {font-weight: bold;} .summary {padding-bottom: 50px; } </style>");
 
 
 		new_window.document.write("<header> <div class='top'> <nav>" 
