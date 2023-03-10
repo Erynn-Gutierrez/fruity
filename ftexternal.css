@@ -70,9 +70,27 @@ footer {
     padding: 3px;
     background-color: #104432;
     color: white;
+/*    float: bottom;*/
+/*   	position: fixed;*/
+/*
+   	bottom: 0;
+   	width: 100%;
+	margin-top: auto;
+*/
+
+} 
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: #104432;
+    color: white;
     width: 100%;
     margin-top: auto;
+	background-image: url("footer.jpeg");
+	opacity: 0.7;
 }
+
 
 
 ul.footer {
@@ -92,4 +110,9 @@ a {
     text-decoration: none; 
     color: White; 
     font-size:24px;
+}
+
+.blankdiv
+{
+	padding: 1px;
 }
