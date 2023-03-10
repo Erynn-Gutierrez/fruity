@@ -9,16 +9,28 @@
 <style>  
 form {
 	display: inline-block;
-  	margin: auto;
+  	margin: auto; 
+	padding-right: 30px; 
+	padding-left: 30px;
   	text-align: center;
   	vertical-align: middle;
-    background-color: rgb(213, 213, 234);
-} 
+    	background-color: rgb(213, 213, 234); 
+	border-radius: 20px; 
+}  
+
+.between { 
+	padding: 40px;
+}
+
+.image { 
+	height: 50px; 
+	width: 50px;
+}
 
 body { 
 	text-align: center;  
-    color: rgb(75, 58, 58);
-	/* background-color: rgb(228, 206, 176); */
+    	color: rgb(75, 58, 58);
+
 }
 </style> 
 <head>
@@ -42,19 +54,20 @@ body {
     </header>
 <script>
 
-function Box(name, cost)
+function Box(name, cost, img)
 {
 	this.name = name;
-	this.cost = cost;
+	this.cost = cost; 
+	this.img = img; 
 }
 
 boxItems = new Array(
-	new Box("Tantalizing Tango", 29.99),
-	new Box("Mango Medley", 29.99),
-	new Box("Pinoy Palooza", 29.99),
-	new Box("Kiwano Krush", 29.99),
-	new Box("Rambutan Rendezvous", 29.99), 
-    new Box("Papaya Party", 29.99)
+	new Box("Tantalizing Tango", 29.99, "<img src= 'mexico.jpeg' width='75' height='75'>"),
+	new Box("Mango Medley", 29.99, "<img src= 'india.jpeg' width='75' height='75'>"),
+	new Box("Pinoy Palooza", 29.99, "<img src= 'philippines.jpeg' width='75' height='75'>"),
+	new Box("Kiwano Krush", 29.99, "<img src= 'kiwano.jpeg' width='75' height='75'>"),
+	new Box("Rambutan Rendezvous", 29.99, "<img src= 'rambutan.jpeg' width='75' height='75'>"), 
+    new Box("Papaya Party", 29.99, "<img src= 'papaya.jpeg' width='75' height='75'>")
 );
 
 function makeSelect(name, minRange, maxRange)
@@ -91,7 +104,8 @@ function td(content, className="")
 </p> -->
 <table border="0" cellpadding="3">
   <tr>
-    <th>Quantity</th>
+    <th>Quantity</th> 
+	<th></th>
     <th>Box Name</th>
     <th>Cost Each</th>
     <th>Total Cost</th>
@@ -102,9 +116,10 @@ function td(content, className="")
   for (i=0; i < boxItems.length; i++)
   {
 	  s += "<tr>";
-	  s += td(makeSelect("quan" + i, 0, 10),"selectQuantity");
+	  s += td(makeSelect("quan" + i, 0, 10),"selectQuantity"); 
+	  s += td(boxItems[i].img, "image");
 	  s += td(boxItems[i].name, "itemName");
-	  s += td("$" +boxItems[i].cost.toFixed(2), "cost");
+	  s += td("$" + boxItems[i].cost.toFixed(2), "cost");
 	  s += td("$<input type='text' name='cost'/>", "totalCost");
 	  s+= "</tr>";
   }
@@ -122,7 +137,9 @@ function td(content, className="")
 
 <input type = "button" value = "Submit Order" />
 
-</form> 
+</form>  
+<div class="between"> 
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js">    
 </script>
 <script>  
@@ -271,10 +288,32 @@ function td(content, className="")
 	function newWindow() 
 	{  
 		var new_window = window.open("Order Summary", "", "");  
-		var name = document.getElementsByClassName("itemName");
+		var name = document.getElementsByClassName("itemName"); 
 
+		// var linkElement = newWindowDocument.createElement("link");
+  		// linkElement.rel = "stylesheet";
+  		// linkElement.href = "ftexternal.css";
+  		// newWindowDocument.head.appendChild(linkElement);
+
+		new_window.document.write('<link rel="stylesheet" href="ftexternal.css">'); 
+
+		new_window.document.write("<style> h1 {color: rgb(233, 150, 164); text-align: center;"
+			+ "font: sans-serif; font-size: 60px;} h2 {color: rgba(28, 34, 28, 0.602);"
+			+ "font: sans-serif; text-align: center} "
+			+ ".ordered, .sub, .tax, .total, .time, .email { color: rgba(28, 34, 28, 0.602);"
+		    + " text-align: center; } .ordered {padding-bottom: 20px} .sub, .tax, .total, .time {font-weight: bold;} .summary {padding-bottom: 50px; } </style>");
+
+
+		new_window.document.write("<header> <div class='top'> <nav>" 
+			+ "<a href='homepage.html'> <img class='logo' src='transparent.png'>"
+			+ "</a> <ul class='topnav'><li><a href='about.html'>About</a></li>"
+			+ "<li><a href='FAQs.html'>FAQs</a></li>"
+			+ "<li><a href='catalog.html'>Catalog</a></li>" 
+			+ "<li><a href='order.html'>Order</a></li>"
+			+ " <li><a href='contact.html'>Contact</a></li>" + "</ul> </nav> </div> </header>");
+	
 		new_window.document.write("<h1>Thank you for ordering!</h1><br>"
-		+ "<h2> ORDER SUMMARY </h2><br>" + "<div class='ordered'>" );
+		+ "<div class='summary'><h2> ORDER SUMMARY </h2><br>" + "<div class='ordered'>" );
 		
 		for (var i = 0; i < boxItems.length; i++) 
 		{  
@@ -295,45 +334,13 @@ function td(content, className="")
 		+ "<div class='tax'> Tax: $" + document.forms[0].tax.value + "</div><br>" 
 		+ "<div class='total'> Total: $" + document.forms[0].total.value + "</div><br>"
 		+ "<div class='time'> Your fruity treasure box should be shipped in 3 - 5 days!" + "</div><br>" 
-        + "<div class='email'> An email confirmation should be sent to: " + document.forms[0].email.value + "!! </div>");
+        + "<div class='email'> An email confirmation should be sent to: " + document.forms[0].email.value + "!! </div> </div>"); 
+
+		new_window.document.write("<footer> <ul class='footer'> <li>"
+		+ "<a href='tt_homepage.html'> FruityTreasures.com</a></li>"
+        + " <li>Copyright 2023</a></li> </ul> </footer> ");
 
 	}
-
-
-	/* calculates time it will take for order to come */
-	// function time()
-	// { 
-	// 	const date = new Date(); 
-	// 	var delivery = document.forms[0].p_or_d.value;  
-	// 	if (delivery == "delivery") 
-	// 	{ 
-	// 		date.setDate(date.getDate() + 45); 
-	// 	} 
-	// 	else 
-	// 	{ 
-	// 		date.setDate(date.getMinutes() + 15); 
-	// 	}   
-	// 	var minutes = date.getMinutes();
-
-	// 	if (minutes < 10) {
-	// 		minutes = "0" + minutes;
-	// 	} 
-	// 	var hours = date.getHours(); 
-	// 	var newTime = "";
-	// 	if (hours > 12) {  
-	// 		newTime = (hours % 12) + ":" + minutes + " pm";  
-	// 	}
-	// 	else if (hours == 12) {
-	// 		newTime = 12 + ":" + minutes + " pm";
-	// 	}
-	// 	else if (hours == 0) {
-	// 		newTime = 12 + ":" + minutes + " am";
-	// 	}  
-	// 	else { 
-	// 		newTime = hours + ":" + minutes + " am";
-	// 	}
-	// 	return newTime;
-	// }
 	
 
 
