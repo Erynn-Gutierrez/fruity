@@ -115,4 +115,10 @@ a {
 .blankdiv
 {
 	padding: 1px;
-}
+} 
+
+@media (max-width: 700px) 
+{ 
+        ul.nav li{padding-left: 10px};
+
+}  
