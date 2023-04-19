@@ -10,8 +10,7 @@ body {
 }
 
 .logo {
-    width:200px;
-    height:200px;
+    height:150px;
     float: left;
     padding-left: 20px;
 }
@@ -43,7 +42,7 @@ header {
     list-style-type:none;
     text-align: right; 
     float:right;
-    padding-top: 90px;
+    padding-top: 50px;
     padding-right: 10px;
 }
 
@@ -51,7 +50,7 @@ header {
     display:inline-block;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
-    padding: 25px;
+    padding: 25px 25px 0px 25px;
 }
 
 .topnav a{
@@ -87,7 +86,7 @@ footer {
     color: white;
     width: 100%;
     margin-top: auto;
-	background-image: url("footer.jpeg");
+/*	background-image: url("footer.jpeg");*/
 	opacity: 0.7;
 }
 
