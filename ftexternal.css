@@ -4,117 +4,51 @@ html, body{
 }
 
 body {
-/*    background-color: rgb(226, 253, 167);*/
-	background-color: #DCFDF2;
-
-    font-family: sans-serif;
-    color: #104432;
+    padding-top: 7.5em;
+    background-color: rgb(226, 253, 167);
+    color:#499B97;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16pt;
 }
 
-li.current {
-/*	background-color: rgb(226, 253, 167);*/
-/*	color: white;*/
-	padding: 10px 0;
-/*	border-radius: 10px;*/
-	font-weight: bold;
-}
-
-.logo {
-    height:150px;
-    float: left;
-    padding-left: 20px;
-}
-
-header {
-	position: sticky; top: 0;
-}
-
-header {
+nav {
     background-color: #DCFDF2;
-    text-align: left;
-    width:100%;
-    display:inline-block;
 }
 
-#mainlogo {
-    text-decoration: none;
-    font-size: 45pt;
-    font-weight: bold;  
-    display: inline-block; 
-    vertical-align: top; 
+.nav-link { color: #499B97;}
+
+
+.navbar-brand {
+    position: relative;
+    width:300px;
+    left: 15px;
+    background-size: contain;
 }
 
-#catchphrase {
-    margin-top: 3pt;
+.navbar-brand img {margin-bottom: -10px;}
+
+.navbar-nav {
+  font-size: 20pt;
+  padding-top: 2.5em;
+  padding-right: 1.5em;
 }
 
-.topnav {
-    list-style-type:none;
-    text-align: right; 
-    float:right;
-    padding-top: 50px;
-    padding-right: 10px;
+.nav-link:hover {
+    color: #28734B;
 }
 
-.topnav li{
-    display:inline-block;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
-    padding: 15px 25px 10px 25px;
-}
-
-.topnav a{
+.navbar-nav .nav-item .nav-link.active {
     color: #499B97;
-    text-decoration: none;
-}
-
-
-h1.big-title {
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  text-align: center;
-	  font-size: 60px;
-	  color: white;
-	  height: 200px;
-	  width: 500px;
-	  float: right;
-	  margin: 100px 50px 50px 100px;
-	  background-color: #499B97;
-	  border-radius: 10px;
-}
-
-div.about-bg {
-	  background-size: 100%;
-	  height: 450px;
-	  margin: 0 0 30px 0;
-	  opacity: 0.7;
-}
-
-
-section {
-    height: 500px;
-}
-
+    text-decoration:underline;
+  }
 
 footer {
     text-align: center;
     padding: 3px;
     background-color: #104432;
     color: white;
+    float: bottom;
 } 
-
-footer {
-    text-align: center;
-    padding: 3px;
-    background-color: #104432;
-    color: white;
-    width: 100%;
-    margin-top: auto;
-	opacity: 0.7;
-}
-
-
 
 ul.footer {
     list-style-type: none; 
@@ -126,23 +60,10 @@ ul.footer li {
     padding: 0 30px;
 }
 
-
-ul.nav li{padding: 0 10px}
+ul.nav li{padding: 0 10 px}
 
 a {
     text-decoration: none; 
     color: White; 
     font-size:24px;
 }
-
-.blankdiv
-{
-	padding: 1px;
-} 
-
-@media (max-width: 700px) 
-{ 
-        ul.nav li{padding-left: 10px};
-
-}  
-
