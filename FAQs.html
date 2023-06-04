@@ -1,97 +1,129 @@
 <!DOCTYPE html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
 <link rel="stylesheet" href="ftexternal.css"> 
 <style>  
-	h1.big-title {
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  text-align: center;
-	  font-size: 60px;
-	  color: white;
-	  height: 200px;
-	  width: 500px;
-	  float: right;
-	  margin: 100px 50px 50px 100px;
-	  background-color: #499B97;
-	  border-radius: 10px;
-	} 
 
-	.bg-image {
-		background-image: url("about.png");
-		height:15em;
-	}
+    h1 { 
+        font-size: 60px; 
+        text-align: center; 
+        color: rgb(233, 150, 164); 
+        font: sans-serif;  
+    } 
 
-    .firstsection {
-        padding-top:2em;
-        padding-bottom: 2em;
+    .summary { 
+        cursor: pointer; 
+        color: rgba(28, 34, 28, 0.602); 
+        display: block; 
+        height: 40px; 
+        background-color: rgb(240, 255, 208);
+        padding-top: 25px;  
+        padding-bottom: 10px;
+        padding-left: 30px;
+        border-radius: 20px; 
+        font-size: 20px; 
+    } 
+
+    .details { 
+        height: 100px; 
+        font-size: 18px; 
+        margin-top: 10px; 
+        margin-right: 30px; 
+        margin-left: 30px; 
+        margin-bottom: 10px; 
+        color: rgba(28, 34, 28, 0.602);  
+        padding-bottom: 70px; 
+        padding-left: 50px; 
+        padding-right: 50px; 
+        line-height: 1.5; 
+    } 
+
+    .details > :not(.summary) {  
+        padding-left: 30px;
     }
 
-    .details {
-        cursor:default;
-        background-color: #DCFDF2;
-        margin-bottom: 1em;
-        margin-top:1em;
-        padding: 1em 2em 1em;
-        border-radius: 30px;
-    }
-    
-    /* Add these new styles */
-    .summary {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+    .questions { 
+        max-height: 500px; 
+        overflow-y: auto;
+    } 
 
-    .summary i {
-        margin-left: auto;
-        cursor:pointer;
-    }
+    .summary::before { 
+        content: "+"; 
+        font-size: 30px; 
+        color: rgba(28, 34, 28, 0.602);
+        margin-right: 10px; 
+        float:right; 
+        padding-bottom: 25px; 
+        padding-right: 25px;
+    } 
+
+    .summary.open::before { 
+        content: "-";
+    }  
+
+    @media (max-width: 891px) 
+    { 
+        .details {padding: 100px}; 
+
+    }   
+
+    @media (max-width: 891px) 
+    {  
+        .summary {padding-bottom: 30px};
+    }   
+
+    @media (max-width: 891px) 
+    { 
+        .summary { padding-top: 55px}; 
+
+    }   
+
+    @media (max-width: 661px) 
+    { 
+        .details {padding-bottom: 300px}; 
+
+    }    
+
+    @media (max-width: 661px) 
+    {  
+        .summary {padding-bottom: 100px};
+    }   
+
+    @media (max-width: 661px) 
+    { 
+        .summary { padding-top: 75px}; 
+
+    }  
+
+
 
 </style>
 <title>Fruity Treasures</title>
 </head>
 <body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
-<nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
-	<div class="container-fluid">
-	  <a class="navbar-brand" href="homepage.html"><img src="fruit-logo.png" class="img-fluid"></a>
-	  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-		<ul class="navbar-nav">
-		  <li class="nav-item">
-			<a class="nav-link" href="about.html">About</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link active" aria-current="page" href="FAQs.html">FAQs</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="catalog.html">Catalog</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="order.html">Order</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="contact.html">Contact</a>
-		  </li>
-		</ul>
-	  </div>
-	</div>
-  </nav>
-
-<section class="farmers-header">
-	<div class="bg-image">
-		<h1 class="big-title">FAQS</h1>
-	</div>
-</section>
+    <!-- Logo +  Nav Bar  -->
+    <header>
+        <div class="top">
+        <nav> 
+            <a href="homepage.html"><img class="logo" src="transparent.png"></a>
+            <ul class="topnav">
+	        <li><a href="about.html">About</a></li>
+            <li><a href="FAQs.html">FAQs</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+	     <li><a href="order.html">Order</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav> 
+        </div>
+    </header>
 
     <section class="firstsection">  
-    <div class="container justify-content-center w-75"> 
+    <div class="questions"> 
+    <h1> FAQs </h1>   
         <div class="details"> 
-            <div class="summary"> What is a fruity treasure box? <i class="bi bi-plus-square-fill"></i></div> 
+            <div class="summary"> What is a fruity treasure box? </div> 
+
             <p class="answer">A fruity treasure box is a curated selection of fruits 
             that represents a specific culture or country. It can 
             include fruits that are commonly consumed in that culture 
@@ -100,10 +132,8 @@
 
         <div class="details"> 
             <div class="summary">How do you select the fruits that go into a 
-            fruity treasure box? 
-            <i class="bi bi-plus-square-fill"></i>
-        </div> 
-            
+            fruity treasure box?</div> 
+
             <p class="answer">We have a team of experts who carefully select and curate 
             the fruits for each fruity treasure box. We consider factors 
             such as the seasonality and availability of the fruits, as 
@@ -112,9 +142,7 @@
         </div> 
 
         <div class="details"> 
-            <div class="summary">Can I customize my fruity treasure box? 
-            <i class="bi bi-plus-square-fill"></i>
-            </div>
+            <div class="summary">Can I customize my fruity treasure box? </div>
 
             <p class="answer"> We have a team of experts who carefully select and curate 
             the fruits for each fruity treasure box. We consider factors 
@@ -122,35 +150,40 @@
             well as their cultural significance and popularity in the 
             specific culture or country.</p>
         </div> 
-
         <div class="details"> 
             <div class="summary">
                 How long does it take for a fruity treasure box to be delivered?
-                <i class="bi bi-plus-square-fill"></i>
             </div> 
             <p class="answer">Delivery times may vary depending on your location and shipping 
             method. Typically, our standard shipping takes 3-5 business days.</p>
         </div>
     </div>  
-    </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+
+    </section>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js">    
+    </script>
     <script>  
         $('.answer').hide();
         $('.summary').click(function() {
+// Expand All
+	// @@ -173,16 +143,14 @@ <h1> FAQs </h1>
             $('.answer').not($(this).next()).slideUp();
             $(this).next().slideToggle(); 
             $('.summary').not($(this)).removeClass('open'); 
             $(this).toggleClass('open');
         });
+
     </script>
+
 
 <footer>
     <ul class='footer'>
-        <li><a href="tt_homepage.html">FruityTreasures.com</a></li>
+        <li><a href="tt_homepage.html">
+            FruityTreasures.com</a></li>
         <li>Copyright 2023</a></li>
     </ul>
 </footer> 
-
 </body>
 </html>
